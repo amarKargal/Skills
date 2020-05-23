@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.pratham.skills.modal.User" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        tools:context=".activities.registration.Registration">
+
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Registration "
+            android:textSize="40sp" />
+        <!-- first name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_first_name"
+            style="@style/registrationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name_hint"
+                android:text="@={user.firstName}" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- last name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_last_name"
+            style="@style/registrationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/last_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_name_hint"
+                android:text="@={user.lastName}" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- address-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_address"
+            style="@style/registrationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address_hint"
+                android:text="@={user.address}" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- state-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_state"
+            style="@style/registrationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/state">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/state_hint"
+                android:text="@={user.state}" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- pincode-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_pin_code"
+            style="@style/registrationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pin_code">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_pin_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pin_code_hint"
+                android:inputType="number"
+                android:text="@={user.pin_code}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit" />
+    </LinearLayout>
+</layout>
