@@ -1,7 +1,6 @@
 package com.pratham.skills.database;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -11,7 +10,6 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-import com.pratham.skills.dao.UserDao;
 import com.pratham.skills.modal.User;
 
 @Database(entities = {User.class}, version = 1)
@@ -20,7 +18,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static AppDatabase appDatabase;
     public static final String DATABASE_NAME = "skillAppDB";
 
-    public abstract UserDao getUserDoa();
+    //public abstract UserDao getUserDoa();
 
 
     public static AppDatabase getDatabaseInstance(Context context) {
